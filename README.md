@@ -1,4 +1,7 @@
-##<center>This repository is no longer maintained!</center> 
+Forked from original at [https://github.com/mir3z/texthighlighter](https://github.com/mir3z/texthighlighter) for some
+minor changes since original is no longer maintained.
+
+##<center>This repository is no longer maintained!</center>
 
 # TextHighlighter
 

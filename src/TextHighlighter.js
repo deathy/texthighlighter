@@ -729,6 +729,8 @@
 
     /**
      * Returns highlights from given container.
+     * In case the TextHighlighter has a custom class assigned to it this returns only highlights having that class.
+     * This enables multiple TextHighlighter instances to be used with the same container and different classes.
      * @param params
      * @param {HTMLElement} [params.container] - return highlights from this element. Default: the element the
      * highlighter is applied to.
@@ -747,7 +749,7 @@
             grouped: false
         });
 
-        var nodeList = params.container.querySelectorAll('[' + DATA_ATTR + ']'),
+        var nodeList = params.container.querySelectorAll('.' + this.options.highlightedClass + '[' + DATA_ATTR + ']'),
             highlights = Array.prototype.slice.call(nodeList);
 
         if (params.andSelf === true && params.container.hasAttribute(DATA_ATTR)) {
